@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GetCars</title>
+    <link rel="stylesheet" href="styles.css" <link="">
+</head>
+<body>
+    <div class="container">
+        <h1>GetCars <br> Compras de automoviles</h1>
+        <h2> Datos del usuario </h2>
+        <!-- Formulario para la información del usuario -->
+        <div id="usuario-form">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required>
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" required>
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" min="18" required>
+            <label for="correo">Correo Electrónico:</label>
+            <input type="email" id="correo" required>
+        </div>
+        <!-- Compras-->
+        <h2> Encuentra tu auto soñado o tu concesionarios </h2>
+        <label for="marcaSelect">Selecciona una marca:</label>
+        <select id="marcaSelect">
+            <option value="">Seleccione una marca...</option>
+        </select>
+        <div class="card-container" id="vehiculos"></div>
+        <div id="carrito">
+            <h2>Carrito de Compras</h2>
+            <ul id="carrito-lista"></ul>
+            <div id="subtotal-total"></div> <!-- Nuevo elemento para mostrar el subtotal total -->
+        </div>
+        <button id="comprar-btn" disabled>Comprar</button>
+    </div>
+    <audio controls autoplay>
+        <source src="media/Kavinsky - Nightcall Drive.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+      </audio>
+      <script src="./script.js"></script>
+</body>
+</html>
