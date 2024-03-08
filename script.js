@@ -21,7 +21,6 @@ let productos = [
     { id: 20, marca: "Volkswagen", nombre: "Nivus", Stock: 3, precio: 15300, año:2018, imagenUrl: "https://www.karvi.com.ar/_next/image/?url=https%3A%2F%2Fdjdnloyvqzzd3.cloudfront.net%2Fstatic%2Fgallery%2Far%2Fdesktop%2Fvolkswagen_nivus_perfil_frente.jpg&w=1024&q=90"  },
     ]
     
-    
     function cargarMarcas() {
         let marcaSelect = document.getElementById('marcaSelect')
     
@@ -39,7 +38,6 @@ let productos = [
         vehiculosContainer.innerHTML = ''
     
         let vehiculosFiltrados = productos.filter(vehiculo => vehiculo.marca === marca)
-    
         vehiculosFiltrados.forEach(vehiculo => {
             let card = document.createElement('div')
             card.classList.add('card')
@@ -116,7 +114,7 @@ let productos = [
             let subtotalText = subtotalElement.textContent.replace('Subtotal: $', '')
             subtotalTotal += parseInt(subtotalText)
         })
-    
+        
         let subtotalTotalElement = document.getElementById('subtotal-total')
         if (carritoItems.length > 0) {
             subtotalTotalElement.textContent = `Subtotal Total: $${subtotalTotal}`
@@ -125,7 +123,6 @@ let productos = [
         }
     }
     
-    // Luego de agregar o eliminar un elemento del carrito, llama a actualizarCarrito()
     document.getElementById('comprar-btn').addEventListener('click', function() {
         if (validarUsuario()) {
             guardarUsuarioEnLocalStorage()
@@ -142,7 +139,6 @@ let productos = [
         }
     })
     
-    // Función para limpiar los campos del formulario después de la compra
     function limpiarCamposFormulario() {
         document.getElementById('nombre').value = ''
         document.getElementById('apellido').value = ''
